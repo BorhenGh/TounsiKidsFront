@@ -1,0 +1,114 @@
+// Variables de couleur
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$background-image: 'https://images.unsplash.com/photo-1506748686214e9df14c1e3e4f3b9b1c7bd0ed94db5a7e4f8b4d1e09b58c4d94b6';
+$form-bg-color: #ffffff;
+$input-border-color: #dcdcdc;
+$input-focus-border-color: $primary-color;
+$button-bg-color: $primary-color;
+$button-hover-bg-color: darken($primary-color, 10%);
+$border-radius: 8px;
+
+// Conteneur du formulaire
+.register-container {
+    background: url($background-image) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+// Wrapper du formulaire
+.register-wrapper {
+    background-color: $form-bg-color;
+    padding: 40px;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// Titre du formulaire
+.register-heading {
+    color: $secondary-color;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+// Formulaire
+.register-form {
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        border: 1px solid $input-border-color;
+        border-radius: $border-radius;
+        padding: 15px;
+        width: 100%;
+        font-size: 16px;
+        transition: border-color 0.3s ease-in-out;
+
+        &:focus {
+            border-color: $input-focus-border-color;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba($input-focus-border-color, 0.2);
+        }
+    }
+
+    .form-control-file {
+        border: 1px solid $input-border-color;
+        border-radius: $border-radius;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease-in-out;
+
+        &::file-selector-button {
+            background-color: $primary-color;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: $border-radius;
+            cursor: pointer;
+        }
+
+        &:focus {
+            border-color: $input-focus-border-color;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba($input-focus-border-color, 0.2);
+        }
+    }
+
+    .submit-btn {
+        background-color: $button-bg-color;
+        color: #ffffff;
+        border: none;
+        padding: 15px 20px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $button-hover-bg-color;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba($button-bg-color, 0.5);
+        }
+    }
+}
