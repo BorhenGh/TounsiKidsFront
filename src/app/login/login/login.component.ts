@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterRequest } from 'src/app/models/register-request';
+import { Role } from 'src/app/models/role';
 
 @Component({
   selector: 'app-login',

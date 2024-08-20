@@ -19,10 +19,7 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule,  NgbModalModule, FormsModule,
-    ReactiveFormsModule,HttpClientXsrfModule.withOptions({
-      cookieName: 'XSRF-TOKEN',
-      headerName: 'X-XSRF-TOKEN'
-    }),JwtModule.forRoot({
+    ReactiveFormsModule,JwtModule.forRoot({
       config: {
         tokenGetter: () => {
           return localStorage.getItem('access_token');

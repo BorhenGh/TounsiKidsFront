@@ -1,27 +1,27 @@
 <div class="register-container">
     <div class="register-wrapper">
         <h2 class="register-heading">Register</h2>
-        <form id="register-form" action="" method="POST" class="register-form">
+        <form id="register-form" (ngSubmit)="register()" class="register-form">
             <div class="form-group">
-                <input type="text" name="firstname" class="form-control" placeholder="First Name" required />
+                <input type="text"  [(ngModel)]="registerRequest.firstname" name="firstname" class="form-control" placeholder="First Name" required />
             </div>
             <div class="form-group">
-                <input type="text" name="lastname" class="form-control" placeholder="Last Name" required />
+                <input type="text" [(ngModel)]="registerRequest.lastname" name="lastname" class="form-control" placeholder="Last Name" required />
             </div>
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email" required />
+                <input type="email" [(ngModel)]="registerRequest.email" name="email" class="form-control" placeholder="Email" required />
             </div>
             <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password" required />
+                <input type="password" [(ngModel)]="registerRequest.password" name="password" class="form-control" placeholder="Password" required />
             </div>
             <div class="form-group">
-                <input type="tel" name="phone" class="form-control" placeholder="Phone" required />
+                <input type="tel"  [(ngModel)]="registerRequest.phone"  name="phone" class="form-control" placeholder="Phone" required />
             </div>
             <div class="form-group">
-                <input type="text" name="location" class="form-control" placeholder="Location" required />
+                <input type="text"  [(ngModel)]="registerRequest.location" name="location" class="form-control" placeholder="Location" required />
             </div>
             <div class="form-group">
-                <input type="file" name="profileImage" class="form-control-file" accept="image/*" />
+                <input type="file" name="profileImage" class="form-control-file" accept="image/*" (change)="onFileSelected($event)" />
             </div>
             <div class="form-group">
                 <button type="submit" class="submit-btn">Register</button>

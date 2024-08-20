@@ -21,9 +21,11 @@ export class AuthService {
   decodeToken(token: string): any {
     return this.jwtHelper.decodeToken(token);
   }
-  register(registerRequest: RegisterRequest): Observable<any> {
-    return this.http.post<any>('http://localhost:8080/api/v1/auth/register', registerRequest);
+  register(formData: FormData): Observable<any> {
+    console.log('Sending request to backend'); // Log pour vérifier que la méthode est appelée
+    return this.http.post<any>('http://localhost:8080/api/v1/auth/register', formData);
   }
+  
 
   getUserIdFromToken(): number | null {
     const token = localStorage.getItem('access_token');

@@ -5,11 +5,10 @@ export interface RegisterRequest {
   lastname: string;
   email: string;
   password: string;
-  nomEntreprise:string;
   role?: Role;
-  numTel : string;
-  pays:string;
-  siteweb:string;
+  phone : string;
+  location:string;
+  profileImage:string;
  
   
 }
