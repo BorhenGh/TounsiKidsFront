@@ -9,12 +9,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home/home.component';
+import { AdminDashboardComponent } from './Admindashboard/admin-dashboard/admin-dashboard.component';
+import { MemberDashboardComponent } from './Memberdashboard/member-dashboard/member-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    AdminDashboardComponent,
+    MemberDashboardComponent
   ],
   imports: [
     BrowserModule,
