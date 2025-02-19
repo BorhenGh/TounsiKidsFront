@@ -10,8 +10,19 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home/home.component';
-import { AdminDashboardComponent } from './Admindashboard/admin-dashboard/admin-dashboard.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import { MemberDashboardComponent } from './Memberdashboard/member-dashboard/member-dashboard.component';
+import { DahsboardComponent } from './admin/dahsboard/dahsboard.component';
+import { ProduitsComponent } from './admin/produits/produits.component';
+import { AddEditProduitsComponent } from './admin/produits/add-edit-produits/add-edit-produits.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { NotficationsComponent } from './admin/notfications/notfications.component';
+import { NavbarComponent } from './admin/navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +30,18 @@ import { MemberDashboardComponent } from './Memberdashboard/member-dashboard/mem
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AdminDashboardComponent,
-    MemberDashboardComponent
+
+    MemberDashboardComponent,
+    DahsboardComponent,
+    ProduitsComponent,
+    AddEditProduitsComponent,
+    NotficationsComponent,
+    NavbarComponent,
+
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,HttpClientModule,  NgbModalModule, FormsModule,
+    BrowserModule,MatSidenavModule,MatSnackBarModule,MatDialogModule,MatSidenavModule,
+    AppRoutingModule,HttpClientModule,  NgbModalModule, FormsModule,MatIconModule,
     ReactiveFormsModule,JwtModule.forRoot({
       config: {
         tokenGetter: () => {
@@ -33,7 +50,7 @@ import { MemberDashboardComponent } from './Memberdashboard/member-dashboard/mem
         allowedDomains: ['*'], // Replace with your domain
         disallowedRoutes: [] // Replace with your API URL
       }
-    })
+    }), BrowserAnimationsModule
   ],
   
   providers: [ {
